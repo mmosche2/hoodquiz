@@ -1,0 +1,9 @@
+rhodes_path='/Users/markmoschel/.rvm/gems/ruby-1.9.3-p194/gems/rhodes-3.5.1.12'
+app_version='1.0'
+app_name='RhoMobileApplication1'
+reload_app_changes=0
+debug_port=
+debug_host='127.0.0.1'
+platform='android'
+os_version='2.1'
+ext_path=/Users/markmoschel/.rvm/gems/ruby-1.9.3-p194/gems/rhodes-3.5.1.12/lib/extensions/json;

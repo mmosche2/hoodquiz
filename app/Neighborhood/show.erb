@@ -1,0 +1,57 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @neighborhood.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @neighborhood.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+      <li>
+        <a href="<%= url_for :action => :mapview, :id => @neighborhood.object %>">
+                    Map This Neighborhood
+                  </a>
+             </li>
+                
+         <li>
+
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @neighborhood.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Url</div>
+            <div class="itemValue"><%= @neighborhood.url %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Lat</div>
+            <div class="itemValue"><%= @neighborhood.lat %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Long</div>
+            <div class="itemValue"><%= @neighborhood.long %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Zip</div>
+            <div class="itemValue"><%= @neighborhood.zip %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Name</div>
+            <div class="itemValue"><%= @neighborhood.name %></div>
+          </li>
+      
+    </ul>
+      
+  </div>
+
+</div>

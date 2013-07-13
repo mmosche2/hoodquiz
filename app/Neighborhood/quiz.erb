@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Neighborhoods</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+    <a href="<%= url_for :action => :new %>" class="ui-btn-right" data-icon="plus">
+      New
+    </a>
+  </div>
+
+  <div data-role="content">
+    <p>Recognize this? Pick the area where this resides.</p>
+      <img src="http://maps.googleapis.com/maps/api/streetview?size=400x400&location=41.904125153168017,%20-87.636997697165882&sensor=false">
+    <ul data-role="listview">
+      <li><a href="<%= url_for :controller => :Neighborhood, :action => :quiz_guess_1 %>">
+        <div align="center"><img src="/public/images/neighborhoods/map1.png" height="80px"></div>
+      </a></li>
+      
+      <li><a href="<%= url_for :controller => :Neighborhood, :action => :quiz_guess_2 %>">
+      <div align="center"><img src="/public/images/neighborhoods/map2.png" height="80px"></div>
+            </a></li>
+            
+      <li><a href="<%= url_for :controller => :Neighborhood, :action => :quiz_guess_3 %>">
+      <div align="center"><img src="/public/images/neighborhoods/map3.png" height="80px"></div>
+            </a></li>
+    </ul>
+  </div>
+
+</div>

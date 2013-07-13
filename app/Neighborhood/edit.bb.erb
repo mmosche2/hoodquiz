@@ -1,0 +1,49 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @neighborhood.object %>
+    <h1>Edit <%= @neighborhood.id%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @neighborhood.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @neighborhood.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id: </td>
+              <td class="itemValue"><input type="text" name="neighborhood[id]" value="<%= @neighborhood.id %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Url: </td>
+              <td class="itemValue"><input type="text" name="neighborhood[url]" value="<%= @neighborhood.url %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Lat: </td>
+              <td class="itemValue"><input type="text" name="neighborhood[lat]" value="<%= @neighborhood.lat %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Long: </td>
+              <td class="itemValue"><input type="text" name="neighborhood[long]" value="<%= @neighborhood.long %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Zip: </td>
+              <td class="itemValue"><input type="text" name="neighborhood[zip]" value="<%= @neighborhood.zip %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Name: </td>
+              <td class="itemValue"><input type="text" name="neighborhood[name]" value="<%= @neighborhood.name %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

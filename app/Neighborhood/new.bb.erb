@@ -1,0 +1,48 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Neighborhood</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @neighborhood.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Id: </td>
+                <td class="itemValue"><input type="text" name="neighborhood[id]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Url: </td>
+                <td class="itemValue"><input type="text" name="neighborhood[url]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Lat: </td>
+                <td class="itemValue"><input type="text" name="neighborhood[lat]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Long: </td>
+                <td class="itemValue"><input type="text" name="neighborhood[long]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Zip: </td>
+                <td class="itemValue"><input type="text" name="neighborhood[zip]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Name: </td>
+                <td class="itemValue"><input type="text" name="neighborhood[name]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
